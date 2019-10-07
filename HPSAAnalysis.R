@@ -23,6 +23,8 @@ qplot(hpsa_frame$HPSA.Discipline,  hpsa_frame$HPSA.Score, data=hpsa_frame, geom=
 p <- qplot(hpsa_frame$Designation.Type,  hpsa_frame$HPSA.Score, data=hpsa_frame, geom="violin",trim=FALSE, fill=hpsa_frame$Designation.Type, main="HPSA Scores By Designation Type")
 p + scale_x_discrete(labels = abbreviate)
 
+qplot(subset$HPSA.Score, data=subset, geom=c("histogram"), main="HPSA Scores", binwidth=2, bins=30)
+
 
 
 
